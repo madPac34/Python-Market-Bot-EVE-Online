@@ -10,7 +10,7 @@ for outbid in pyautogui.locateAllOnScreen('red1.png', confidence=0.9) :
     pyautogui.moveTo(outbid, duration=0.3)
     pyautogui.moveRel(-50, 2, duration=0.1)
     pyautogui.click()
-    time.sleep(2)
+    time.sleep(random.uniform(1, 1.5))
 
     #Eve Client
     if pyautogui.locateCenterOnScreen('buy.png', confidence=0.9) == None :
