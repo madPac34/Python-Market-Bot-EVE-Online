@@ -13,17 +13,17 @@ for outbid in pyautogui.locateAllOnScreen('red1.png', confidence=0.9) :
     time.sleep(random.uniform(1, 1.5))
 
     #Eve Client
-    if pyautogui.locateCenterOnScreen('buy.png', confidence=0.9) == None :
+    if pyautogui.locateCenterOnScreen('buy.png', confidence=0.99) == None :
         time.sleep(random.uniform(0.8, 1.2))
 
-    elif pyautogui.locateCenterOnScreen('buy.png', confidence=0.9) != None :
-        buylocation = pyautogui.locateCenterOnScreen('buy.png', confidence=0.9)
+    elif pyautogui.locateCenterOnScreen('buy.png', confidence=0.99) != None : 
+        buylocation = pyautogui.locateCenterOnScreen('buy.png', confidence=0.99)
         x1 = buylocation[0]
         y1 = buylocation[1]
-        x2 = x1 + random.randint(-2, 2)
+        x2 = x1 + random.randint(-2, 2) +10
         y2 = y1 + random.randint(-2, 2)
         buylocationrandom = x2, y2
-        pyautogui.moveTo(buylocationrandom, duration=random.uniform(0.7, 1.5))
+        pyautogui.moveTo(buylocationrandom, duration=random.uniform(0.7, 1))
         time.sleep(random.uniform(0.05, 0.15))
         pyautogui.rightClick()
         time.sleep(random.uniform(0.05, 0.15))
